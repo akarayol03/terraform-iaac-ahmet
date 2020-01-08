@@ -1,5 +1,5 @@
-resource "aws_s3_bucket" "c" { 
-  bucket = "my-tf-test-bucket-akarayol2" 
+resource "aws_s3_bucket" "d" { 
+  bucket = "my-tf-test-bucket-akarayol" 
   acl    = "private" 
 
   tags = { 
