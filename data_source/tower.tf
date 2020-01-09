@@ -1,8 +1,3 @@
-#Go to region 1'
-provider "aws" {
-    region = "us-east-1" 
-
-} 
 # Search for centos Latest with the owner
 data "aws_ami" "centos" {
      filter { 
@@ -34,7 +29,7 @@ resource "aws_key_pair" "towerkey" {
 
 
 
-resource "aws_instance" "web" {
+resource "aws_instance" "tower" {
     ami           = data.aws_ami.ubuntu.id
     instance_type = "t2.micro"
     key_name = aws_key_pair.towerkey.key_name
