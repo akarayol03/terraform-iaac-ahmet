@@ -50,7 +50,7 @@ tags = {
 
 resource "aws_route53_record" "tower" { 
   zone_id = "Z339ZQTAJHGFCO" 
-  name    = "tower.example.com" 
+  name    = "tower" 
   type    = "A" 
   ttl     = "300" 
   records = [aws.aws_instance.web.public_ip] 
