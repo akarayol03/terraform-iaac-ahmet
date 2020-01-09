@@ -53,5 +53,5 @@ resource "aws_route53_record" "tower" {
   name    = "tower" 
   type    = "A" 
   ttl     = "300" 
-  records = [aws.aws_instance.web.public_ip] 
+  records = [aws.aws_instance.tower.public_ip] 
 } 
