@@ -27,8 +27,6 @@ resource "aws_key_pair" "towerkey" {
 
 
 
-
-
 resource "aws_instance" "tower" {
     ami           = data.aws_ami.ubuntu.id
     instance_type = "t2.micro"
