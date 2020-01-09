@@ -39,11 +39,12 @@ resource "aws_instance" "tower" {
             private_key = file("~/.ssh/id_rsa") 
             } 
             inline = [ 
-                "sudo yum install -y epel-release"
-                }
-                tags = {
-                    Name = "HelloWorld"
-                    }
+                "sudo yum install -y epel-release",
+                ]
+}  
+tags = {
+    Name = "HelloWorld"
+    }
 }
 
 
