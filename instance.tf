@@ -10,7 +10,7 @@ resource "aws_instance" "web" {
 
 
 
-    user_data = "${file("userdata_file")}"
+    user_data = ${file("userdata_file")
 
 tags = { 
     Name = "HelloWorld" 
