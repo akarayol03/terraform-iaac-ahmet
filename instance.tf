@@ -7,7 +7,7 @@ resource "aws_instance" "web" {
     security_groups = ["allow_ssh"]
 
 
-    user_data = ${file("userdata_file")
+    user_data = file("userdata_file")
 
 tags = { 
     Name = "HelloWorld" 
