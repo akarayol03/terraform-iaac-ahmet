@@ -1,15 +1,14 @@
 resource "aws_instance" "web" { 
-    ami           = "ami-062f7200baf2fa504" 
-    instance_type = "t2.micro" 
-    associate_public_ip_address = "true"
-    key_name = aws_key_pair.deployer.key_name
+    ami           = var.ami 
+    instance_type = var.instance_type
+    associate_public_ip_address = var.associate_public_ip_address
+    key_name = var.key_name
 
-    security_groups = ["allow_ssh"]
+    security_groups = var.security_groups
 
-
-    user_data = file("userdata_file")
+    user_data = var.user_data
 
 tags = { 
-    Name = "HelloWorld" 
+    Name = "TerraformTest" 
     }
 } 
