@@ -6,4 +6,4 @@ user                         = "ec2-user"
 ssh_key_location             = "~/.ssh/id_rsa"
 key_name                     = "deployer"
 security_groups              = ["allow_ssh"]
-user_data                    = "file("userdata_file")"
+user_data                    = file("userdata_file")
