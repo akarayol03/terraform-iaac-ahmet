@@ -1,4 +1,4 @@
-resource "aws_route53_record" "wwws" { 
+resource "aws_route53_record" "www" { 
   zone_id = "Z339ZQTAJHGFCO" 
   name    = "www.originalpeak.com." 
   type    = "A" 
