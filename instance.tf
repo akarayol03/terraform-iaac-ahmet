@@ -5,8 +5,12 @@ resource "aws_instance" "web" {
     associate_public_ip_address  = var.associate_public_ip_address
     key_name                     = var.key_name
     security_groups              = var.security_groups              
-
-tags = { 
-    Name = "TerraformTest" 
+    
+    lifecycle{
+        prevent_destroy = false
+    }
+    
+    tags = { 
+    Name = "TerraformTest${count.index +1}" 
     }
 } 
